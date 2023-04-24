@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-23T08:57:21.599Z",
+    "end": "2023-04-23T08:57:30.185Z",
+    "duration": 8586,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e32512cc-0cd0-4935-b01f-96c948b0ba8e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC02_Fixture.cy.js",
+      "file": "cypress\\e2e\\TC02_Fixture.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bc606cb4-7e7b-44af-a4cf-8a45e4897642",
+          "title": "Organe Hrm site login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "Organe Hrm site login login",
+              "timedOut": null,
+              "duration": 2768,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[name='username']\").type((void 0).testdata.username);\ncy.get(\"[name='password']\").type((void 0).testdata.password);\ncy.get(\"[type='submit']\").click();\ncy.get('.orangehrm-quick-launch').each(($el, index) => {\n  expect($el).to.contain((void 0).testdata.quickLaunch[index]);\n});",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'testdata')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'testdata')\n    at Context.eval (webpack:///./cypress/e2e/TC02_Fixture.cy.js:17:42)",
+                "diff": null
+              },
+              "uuid": "56e6a2a3-54d5-4ed3-995a-983cf12ec9c4",
+              "parentUUID": "bc606cb4-7e7b-44af-a4cf-8a45e4897642",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "56e6a2a3-54d5-4ed3-995a-983cf12ec9c4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2768,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

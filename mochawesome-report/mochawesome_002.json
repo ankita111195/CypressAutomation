@@ -1,0 +1,161 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-23T08:57:41.336Z",
+    "end": "2023-04-23T08:57:42.674Z",
+    "duration": 1338,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41f1c1ea-6ac5-4e4e-a9cc-5dec5922aced",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC03_write_read.cy.js",
+      "file": "cypress\\e2e\\TC03_write_read.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d693673f-500a-4133-a1f2-03e11feeddec",
+          "title": "write txt in txt file",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "write a text",
+              "fullTitle": "write txt in txt file write a text",
+              "timedOut": null,
+              "duration": 463,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('cypress/fixtures/test1.txt', 'Testersdock.com\\n');",
+              "err": {},
+              "uuid": "fef89479-686a-4512-b4a5-c491e6c3f016",
+              "parentUUID": "d693673f-500a-4133-a1f2-03e11feeddec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Append content to the end of the text file test1.txt using the flag a+",
+              "fullTitle": "write txt in txt file Append content to the end of the text file test1.txt using the flag a+",
+              "timedOut": null,
+              "duration": 178,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('cypress/fixtures/test1.txt', 'Info Hub for Testers', {\n  flag: 'a+'\n});",
+              "err": {},
+              "uuid": "d34fece9-b043-42d8-ab62-15e3ddaf452b",
+              "parentUUID": "d693673f-500a-4133-a1f2-03e11feeddec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Write to a JSON file test2.json using writeFile",
+              "fullTitle": "write txt in txt file Write to a JSON file test2.json using writeFile",
+              "timedOut": null,
+              "duration": 217,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('cypress/fixtures/test2.json', {\n  firstname: 'Ankita',\n  lastname: 'Bhatia'\n});",
+              "err": {},
+              "uuid": "ba6981ae-f12f-4b1b-9400-23eacb797552",
+              "parentUUID": "d693673f-500a-4133-a1f2-03e11feeddec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the content of both text and JSON file using readFile",
+              "fullTitle": "write txt in txt file Validate the content of both text and JSON file using readFile",
+              "timedOut": null,
+              "duration": 269,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('cypress/fixtures/test1.txt').should('contain', 'Testersdock');\ncy.readFile('cypress/fixtures/test1.txt').should('eq', 'Testersdock.com\\nInfo Hub for Testers');\ncy.readFile('cypress/fixtures/test2.json').its('firstname').should('eq', 'Ankita');",
+              "err": {},
+              "uuid": "7584e13a-fac3-41c9-8fc7-485f2353254e",
+              "parentUUID": "d693673f-500a-4133-a1f2-03e11feeddec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fef89479-686a-4512-b4a5-c491e6c3f016",
+            "d34fece9-b043-42d8-ab62-15e3ddaf452b",
+            "ba6981ae-f12f-4b1b-9400-23eacb797552",
+            "7584e13a-fac3-41c9-8fc7-485f2353254e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1127,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

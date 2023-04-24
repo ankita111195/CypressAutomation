@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-23T08:57:50.766Z",
+    "end": "2023-04-23T08:57:52.081Z",
+    "duration": 1315,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1de905b5-1e9e-414d-8428-6d55021f2cc2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC04_api_tes.cy.js",
+      "file": "cypress\\e2e\\TC04_api_tes.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "68d8240b-d4fe-4133-9a6c-b65db2bd2eaa",
+          "title": "Example to demonstrate API Testing in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hit an API End point and validate its response status code and body",
+              "fullTitle": "Example to demonstrate API Testing in cypress Hit an API End point and validate its response status code and body",
+              "timedOut": null,
+              "duration": 1041,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://randomuser.me/api/',\n  qs: 'results=1'\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('info');\n  expect(response.body.info).to.have.property('version', '1.3');\n});",
+              "err": {
+                "message": "AssertionError: expected { Object (seed, results, ...) } to have property 'version' of '1.3', but got '1.4'",
+                "estack": "AssertionError: expected { Object (seed, results, ...) } to have property 'version' of '1.3', but got '1.4'\n    at Context.eval (webpack:///./cypress/e2e/TC04_api_tes.cy.js:11:47)",
+                "diff": "- '1.4'\n+ '1.3'\n"
+              },
+              "uuid": "977bcfe6-c718-48a3-8cac-fa8f9729b187",
+              "parentUUID": "68d8240b-d4fe-4133-9a6c-b65db2bd2eaa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "977bcfe6-c718-48a3-8cac-fa8f9729b187"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1041,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
